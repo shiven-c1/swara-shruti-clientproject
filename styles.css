@@ -1,0 +1,289 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(133deg, #7f53ac 0%, #ea4c89 100%);
+  min-height: 100vh;
+}
+.moving-header {
+  width: 100%;
+  background: linear-gradient(90deg, #7f53ac 80%, #ea4c89);
+  color: #fff;
+  padding: 11px 0 10px 0;
+  font-size: 1.01rem;
+  font-weight: 500;
+  overflow: hidden;
+  position: relative;
+  letter-spacing: 0.8px;
+  box-shadow: 0 1.5px 8px rgba(79,24,133,0.09);
+  z-index: 11;
+}
+.moving-header span {
+  display: inline-block;
+  padding-left: 100%;
+  white-space: nowrap;
+  animation: scroll-header 10s linear infinite;
+}
+@keyframes scroll-header {
+  0% { transform: translateX(0);}
+  100% { transform: translateX(-100%);}
+}
+/* Glassy Navbar */
+.ie-navbar {
+  width: 100%;
+  background: rgba(255,255,255,0.86);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 20px rgba(127,83,172,0.10);
+  border-bottom: 1.5px solid rgba(255,255,255,0.20);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: box-shadow 0.2s;
+}
+.ie-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.ie-nav-logo {
+  font-size: 1.43rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #7f53ac;
+  font-family:'Times New Roman', Times, serif;
+  user-select: none;
+  cursor: pointer;
+}
+.ie-nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2.2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.ie-nav-menu a {
+  font-size: 1.09rem;
+  font-family: 'Poppins', Arial, sans-serif;
+  text-decoration: none;
+  color: #27156e;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background 0.17s, color 0.17s;
+}
+.ie-nav-menu a:hover,
+.ie-nav-menu a:focus {
+  color: #ea4c89;
+  background: #f5ecfa;
+}
+.ie-nav-hamburger {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 16px;
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 39px;
+  height: 39px;
+}
+.ie-nav-hamburger span {
+  display: block;
+  width: 28px;
+  height: 3.2px;
+  background: #7f53ac;
+  border-radius: 2px;
+  margin: 5px 0 0 0;
+  transition: 0.23s all;
+}
+.ie-nav-hamburger span:first-child { margin-top: 0; }
+.ie-nav-hamburger.active span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+.ie-nav-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.ie-nav-hamburger.active span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+@media (max-width: 900px) {
+  .ie-nav-container {padding: 0 10px;}
+  .ie-nav-menu {gap: 1.2rem;}
+}
+@media (max-width: 700px) {
+  .ie-nav-hamburger {display: flex;}
+  .ie-nav-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(255,255,255,0.99);
+    box-shadow: 0 10px 30px rgba(127,83,172,0.13);
+    border-radius: 0 0 14px 14px;
+    width: 100vw;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.2rem;
+    z-index: 12;
+    display: none;
+    padding: 10px 0;
+  }
+  .ie-nav-menu.active {display: flex;}
+  .ie-nav-menu a {
+    font-size: 1.07rem;
+    color: #27156e;
+    width: 97vw;
+    display: block;
+    text-align: left;
+    border-radius: 7px;
+    padding: 11px 20px;
+    margin: 0 auto;
+  }
+}
+/* HERO BANNER */
+.hero-banner {
+  width: 100vw; min-height: 300px;
+  background: linear-gradient(110deg, #7f53ac 30%, #ea4c89 82%);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; box-shadow: 0 6px 22px rgba(127,83,172,0.10);
+}
+.hero-content {
+  width: 100vw; max-width: 600px;
+  margin: 0 auto; text-align: center; color: #fff;
+  padding: 48px 10px 32px 10px;
+  z-index: 2; display: flex; flex-direction: column; align-items: center;
+}
+.hero-img {
+  width: 210px;
+  height: 210px;
+  max-width: 95vw;
+  object-fit: cover;
+  border-radius: 22px;
+  margin: 0 auto 26px auto;
+  box-shadow: 0 10px 32px rgba(127,83,172,0.14);
+  display: block;
+}
+.hero-title {
+  font-size: 2.17rem;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  text-shadow: 0 3px 14px rgba(127,83,172,0.10);
+}
+.hero-subtitle {
+  font-size: 1.17rem;
+  color: #fbe9fa;
+  font-weight: 500;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-shadow: 0 1px 8px rgba(127,83,172,0.06);
+}
+@media (max-width: 700px) {
+  .hero-banner {min-height: 140px;}
+  .hero-content {padding: 22px 0 12px 0;}
+  .hero-title {font-size: 1.17rem;}
+  .hero-subtitle {font-size: 0.98rem;}
+  .hero-img {width: 120px; height: 120px; margin-bottom: 15px;}
+}
+
+/* MAIN CONTAINER & CARDS */
+.container {
+  max-width: 700px; margin: 40px auto;
+  background: rgba(255,255,255,0.83);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  padding: 2rem; border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(79,24,133,0.10);
+  color: #222; border: 1.5px solid rgba(255,255,255,0.26);
+}
+.services-list {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem; padding: 0.5rem;
+}
+.service-card {
+  background: rgba(255,255,255,0.97);
+  border-radius: 13px;
+  box-shadow: 0 2px 11px rgba(127,83,172,0.08);
+  margin-bottom: 0; border-bottom: none;
+  padding: 1rem;
+  display: flex; flex-direction: column;
+  justify-content: space-between; font-size: 1rem;
+}
+.service-title {font-size: 1.11rem; margin-bottom: .5rem;}
+.contact-buttons {display: flex; gap: 10px; margin-top: auto;}
+.call-btn, .whatsapp-btn {
+  display: flex; align-items: center; justify-content: center;
+  padding: 10px 0; border-radius: 4px; text-decoration: none;
+  color: #fff; font-weight: bold; font-size: 1rem;
+  flex: 1 1 45%; min-width: 0; white-space: nowrap;
+}
+.call-btn {background: #7f53ac;}
+.whatsapp-btn {background: #ea4c89;}
+/* INCREASED image height for cards and better mobile visibility */
+.service-photo {
+  width: 100%; height: 210px; object-fit: cover;
+  border-radius: 8px; margin-bottom: 1rem; background: #eee; display: block;
+}
+@media (max-width: 700px) {
+  .container {padding: 1rem;}
+  .services-list {grid-template-columns: 1fr; gap: 1rem;}
+  .service-photo {height: 170px !important; border-radius: 10px;}
+  .service-title {font-size: 1.03rem;}
+  .service-card {padding: 0.5rem; font-size: 0.93rem;}
+  .call-btn, .whatsapp-btn {font-size: 0.93rem; padding: 10px 0;}
+}
+@media (max-width: 400px) {
+  .service-title {font-size: 0.93rem;}
+  .call-btn, .whatsapp-btn {font-size: 0.89rem; padding: 8px 0;}
+}
+
+.shine-btn {position: relative; overflow: hidden; z-index: 1;}
+.shine-btn::before {
+  content: ""; position: absolute; top: 0; left: -75%; width: 50%; height: 100%;
+  background: linear-gradient(120deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.4) 50%,rgba(255,255,255,0) 100%);
+  transform: skewX(-20deg); animation: shine 2s infinite; z-index: 2; pointer-events: none;
+}
+@keyframes shine {to {left: 125%;}}
+
+/* REVIEWS SECTION - Glassy card */
+.reviews-section {
+  max-width: 700px;
+  margin: 40px auto 0 auto;
+  background: rgba(255,255,255,0.90);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border-radius: 18px;
+  box-shadow: 0 6px 36px rgba(79, 24, 133, 0.12);
+  padding: 2rem;
+  border: 1.5px solid rgba(255,255,255,0.27);
+  color: #222;
+  transition: background 0.17s;
+}
+.reviews-header {
+  margin-top: 0; margin-bottom: 1.2rem; text-align: center;
+  color: #7f53ac; font-size: 1.24rem; font-weight: bold; letter-spacing: 0.52px;
+}
+.reviews-list {display: flex; flex-direction: column; gap: 1.3rem;}
+.review-card {
+  background: rgba(255,255,255,0.97);
+  border-radius: 10px;
+  box-shadow: 0 1.5px 8px rgba(127,83,172,0.096);
+  padding: 1.1rem 1rem 0.9rem 1rem;
+  color: #321b49; font-size: 1.01rem; position: relative;
+  border-left: 4px solid #ea4c89;
+}
+.reviewer-name {font-weight: 700; font-size: 1.07rem; color: #ea4c89; margin-bottom: 5px; letter-spacing: 0.2px;}
+.review-text {font-size: 0.98rem; color: #321b49; font-style: italic;}
+@media (max-width: 700px) {
+  .reviews-section {padding: 1rem; margin: 1.2rem auto 0 auto;}
+  .reviews-header {font-size: 1.01rem;}
+  .review-card {font-size: 0.95rem; padding: 0.85rem 0.7rem 0.75rem 0.8rem;}
+}
