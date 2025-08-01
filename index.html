@@ -21,9 +21,9 @@
         <li><a href="#services-list">Services</a></li>
         <li><a href="tel:+919096415139">Call</a></li>
         <li><a href="#reviews-section">Reviews</a></li>
-        <li><a href="https://www.instagram.com/swara._shruti?igsh=MThxd2plOTB6NmI4Ng==">Instagram</a></li>
+        <li><a href="https://www.instagram.com/swara._shruti?igsh=MThxd2plOTB6NmI4Ng==" target="_blank">Instagram</a></li>
       </ul>
-      <button class="ie-nav-hamburger" aria-label="Menu">
+      <button class="ie-nav-hamburger" aria-label="Menu" type="button">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -54,6 +54,7 @@
   <div id="reviews-section" class="reviews-section">
     <h2 class="reviews-header">Reviews</h2>
     <div class="reviews-list">
+      <!-- (same review-cards as before) -->
       <div class="review-card">
         <div class="reviewer-name">Vishal Singh</div>
         <div class="review-text">Wonderful experience! My harmonium was restored beautifully. Highly recommended to anyone who loves music.</div>
@@ -78,23 +79,59 @@
         <div class="reviewer-name">Meenal Desai</div>
         <div class="review-text">Thank you for fixing the keys and giving the instrument a new life. Honest advice and reliable!</div>
       </div>
+      <div class="review-card">
+        <div class="reviewer-name">Roshan S.</div>
+        <div class="review-text">At Swara Shruti - I am quite impressed with the Knowledge & Expertise of Abhishek Sir who clearly pointed out the faults behind issues i was facing with my harmonium. At first, i was not sure whether to go for his opinion & services or not, as i would rather prefer to go for my regular music shop's services, but i frankly speaking decided to try him for once and check out the results. And i must clearly say that i was quite amazed with the results i got. Simply, it's quite a wonderful experience when i play my box now - both for my leisure and weekend practices, i can't thank him enough for what magic has he done. Thank you Sir. Highly recommended.</div>
+      </div>
+      <div class="review-card">
+        <div class="reviewer-name">Chandra Banerjee</div>
+        <div class="review-text">Very good and hard work ,all repair work of harmonium synthesizer mobile laptop is very good, keep it up👍👍👍</div>
+      </div>
+      <div class="review-card">
+        <div class="reviewer-name">Vishakha Shende</div>
+        <div class="review-text">He really do perfect tuning and repairing in very less time (on urgent basis). I recommend everyone do visit there.</div>
+      </div>
+      <div class="review-card">
+        <div class="reviewer-name">Nisarg Sukhadeve</div>
+        <div class="review-text">Very good service. Highly recommended.</div>
+      </div>
+      <div class="review-card">
+        <div class="reviewer-name">Rewatkar Shiven</div>
+        <div class="review-text">Beat place if you want to repair any electronic thing.</div>
+      </div>
     </div>
   </div>
 
+  <!-- Footer with Google Map -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <div class="footer-title">SWARA SHRUTI</div>
+        <div class="footer-contact">
+          <span><strong>Address:</strong>Trupti Vihar Apartment, front of skating ground, Plot no 29, FA 101, opposite UCO bank, Swavalambi Nagar, Nagpur, Maharashtra 440022</span><br>
+          <span><strong>Phone:</strong> <a href="tel:+919096415139">+91 9096415139</a></span>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/swara._shruti?igsh=MThxd2plOTB6NmI4Ng==" target="_blank">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.034994293064!2d79.04583957503384!3d21.11117098055888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf8e979d85fb%3A0xac95d30d3b207e4e!2sSwara%20Shruti!5e0!3m2!1sen!2sin!4v1754078605322!5m2!1sen!2sin"
+          width="100%"
+          height="230"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Swara Shruti. All rights reserved.
+    </div>
+  </footer>
+
   <script src="script.js"></script>
-  <script>
-    const burger = document.querySelector('.ie-nav-hamburger');
-    const nav = document.querySelector('.ie-nav-menu');
-    burger.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      burger.classList.toggle('active');
-    });
-    document.querySelectorAll('.ie-nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('active');
-        burger.classList.remove('active');
-      });
-    });
-  </script>
 </body>
 </html>
