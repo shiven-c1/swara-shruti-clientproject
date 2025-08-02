@@ -57,7 +57,7 @@ body {
   font-weight: 700;
   letter-spacing: 1.5px;
   color: #7f53ac;
-  font-family:'Times New Roman', Times, serif;
+  font-family:cursive;
   user-select: none;
   cursor: pointer;
 }
@@ -425,6 +425,48 @@ body {
     padding: 11px 20px;
     margin: 0 auto;
   }
+  .review-us-section {
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(6px);
+  max-width: 520px;
+  margin: 40px auto 20px auto;
+  padding: 32px 28px 26px 28px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 5px 24px rgba(130, 35, 109, 0.13);
+  border: 1.5px solid rgba(127, 83, 172, 0.14);
+}
+.review-us-section h2 {
+  color: #7f53ac;
+  margin-top: 0;
+  font-size: 1.32rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+.review-us-section p {
+  margin: 0 0 6px 0;
+  color: #321b49;
+  font-size: 1.08rem;
+}
+.review-link {
+  color: #ea4c89;
+  font-weight: 600;
+  padding: 3px 13px;
+  border-radius: 7px;
+  background: #f7d0e8;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+}
+.review-link:hover {
+  background: #ea4c89;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width:600px){
+  .review-us-section{padding:16px 8px;}
+  .review-us-section h2{font-size:1.09rem;}
+}
+
 }
 .ie-nav-hamburger.active span:nth-child(1) {
   transform: translateY(8.5px) rotate(45deg);
